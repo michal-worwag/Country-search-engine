@@ -1,4 +1,4 @@
-var url = 'https://restcountries.eu/rest/v1/name/';
+var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = document.getElementById('countries');
 
 document.getElementById('search').addEventListener('click', searchCountries);
@@ -6,7 +6,7 @@ document.getElementById('search').addEventListener('click', searchCountries);
 function searchCountries() {
     var countryName = document.getElementById('country-name').value;
     if(!countryName.length) countryName = 'Poland';
-    fetch(url + countryName)
+    fetch('https://restcountries.eu/rest/v2/name/' + countryName)
         .then(function(resp) {
             return resp.json();
         })
@@ -21,4 +21,3 @@ function showCountriesList(resp) {
         countriesList.appendChild(liEl);
     });
   }
-
