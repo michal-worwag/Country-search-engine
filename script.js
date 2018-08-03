@@ -15,5 +15,10 @@ function searchCountries() {
 
 function showCountriesList(resp) {
     countriesList.innerHTML = '';
+    resp.forEach(function(item) {
+        var liEl = document.createElement('li');
+        liEl.innerText = item.name;
+        countriesList.appendChild(liEl);
+    });
   }
 
