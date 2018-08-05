@@ -15,15 +15,14 @@ function searchCountries() {
 
 function showCountriesList(resp) {
     countriesList.innerHTML = '';
-    if (resp.name){
     resp.forEach(function(item) {
         var liEl = document.createElement('li');
+        if (item.name == true) {
         liEl.innerText = item.name;
         countriesList.appendChild(liEl);
-    });
-} else {
-    var liEl = document.createElement('li');
-        liEl.innerText = 'No country Found';
+        } else {
+            liEl.innerText = 'Country not found';
         countriesList.appendChild(liEl);
+        }
+    });
 }
-  }
