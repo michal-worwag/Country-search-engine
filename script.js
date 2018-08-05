@@ -5,7 +5,7 @@ document.getElementById('search').addEventListener('click', searchCountries);
 
 function searchCountries() {
     var countryName = document.getElementById('country-name').value;
-    if(!countryName.length) countryName = 'Poland';
+    if(!countryName.length) {countryName = 'Poland';}
     fetch('https://restcountries.eu/rest/v2/name/' + countryName)
         .then(function(resp) {
             return resp.json();
