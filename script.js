@@ -1,7 +1,16 @@
 var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = document.getElementById('countries');
+var countryName = document.getElementById('country-name');
 
 document.getElementById('search').addEventListener('click', searchCountries);
+
+countryName.addEventListener('change', function(){
+    searchCountries();
+});
+
+countryName.addEventListener('keyup', function(){
+    searchCountries();
+});
 
 function searchCountries() {
     var countryName = document.getElementById('country-name').value;
@@ -28,7 +37,7 @@ function showCountriesList(resp) {
     var liEl = document.createElement('li');
     resp.forEach(function(item) {
         var liEl = document.createElement('li');
-        liEl.innerText = item.name;
+        liEl.innerHTML = '<div>' + item.name + ':' + '<br>' + ' - Capital city: ' + item.capital + '<br>' + ' - Native name: ' + item.nativeName + '</div>';
         countriesList.appendChild(liEl);
     });
 }

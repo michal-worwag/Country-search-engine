@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #636e72;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 0;
+}
+
+.container h1 {
+  color: #ffeaa7;
+  text-transform: uppercase;
+}
+
+.container input, .btn {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 2px #fff;
+  background-color: #636e72;
+  color: #fff;
+  text-align: center;
+}
+
+.container input::placeholder {
+  color: #fff;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+.countryList {
+  margin: 20px;
+  padding: 0;
+  list-style: inside;
+  text-align: left;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.countryList div {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: solid 2px #fff;
+}

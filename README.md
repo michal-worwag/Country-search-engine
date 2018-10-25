@@ -1,3 +1,11 @@
-Zadanie-12.6
+# Country Search Engine
 
-https://michal-worwag.github.io/Zadanie-12.6/
+Simple app using Api to search countries.
+
+### Used
+
+- HTML
+- CSS
+- AJAX (FetchAPI)
+
+![Country-Search-Engine sample image]()

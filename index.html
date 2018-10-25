@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Country search engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Country search engine</h1>
-    <button id="search">Search a country</button>
-    <input id="country-name" type="text" />
-    <h2>List of countries</h2>
-    <ul id="countries">
-        <li>No data</li>
-    </ul>
-
+    <div class="container">
+        <h1 class="header">Country search engine</h1>
+        <h2>Search for countries</h2>
+        <input id="country-name" type="text" placeholder="enter country name" />
+        <button id="search" class="btn">Search a country</button>
+        <h2>List of countries</h2>
+        <ul id="countries" class="countryList">
+            <li>No data</li>
+        </ul>
+    </div>
     <script src="script.js"></script>
 </body>
 
